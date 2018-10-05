@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         rvBitmaps.setLayoutManager(new GridLayoutManager(this, 2));
         BitmapShapeHelper helper = BitmapHelperFactory.newBitmapShapeHelper();
         List<Bitmap> list = new ArrayList<>();
-        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.timg);
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.demo);
         list.add(bitmap);
         BitmapShapeOption option = new BitmapShapeOption.Builder()
                 .setStrokeWidth((int) ScreenUtils.getPxFromDp(getResources(), 2))

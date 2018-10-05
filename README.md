@@ -1,6 +1,8 @@
  由于许多时候需要使用到对图片的一些裁剪特效，所以写了一个简单的帮助库，目前只是简单对形状做了一些处理，后续会进行优化改进，加入更多的效果。
 ## 一.各种处理效果
-![在这里插入图片描述](https://img-blog.csdn.net/20181005165500890?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NsMjAxOGdvZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![Image text](
+        images/Screenshot_20181005-175544.jpg
+      )
 
 第一张图片是原图，后续依次是裁剪圆形、正方形、椭圆、弧形、矩形、圆角矩形、随意路径，既可以从源图片中央开始裁剪，指定裁剪比例，也可以在源图片指定任意的矩形位置开始裁剪，并且可以指定是否添加边框，边框颜色和宽度。
 ## 二.添加依赖

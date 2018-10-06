@@ -80,7 +80,7 @@ public class BitmapOvalShape implements BitmapOvalShapeable {
         destRect.set(0, 0, wideLength, highLength);
         Path path = new Path();
         path.addOval(new RectF(destRect), Path.Direction.CW);
-        canvas.clipPath(path);
+        BitmapUtils.clipPath(canvas, path, option);
         Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
         canvas.drawBitmap(srcBp, srcRect, destRect, paint);
         BitmapUtils.drawShapeOption(canvas, paint, path, option);

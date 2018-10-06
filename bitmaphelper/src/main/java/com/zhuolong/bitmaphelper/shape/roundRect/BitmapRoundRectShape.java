@@ -101,7 +101,7 @@ public class BitmapRoundRectShape implements BitmapRoundRectShapeable {
         if (radius != null) {
             path = new Path();
             path.addRoundRect(new RectF(destRect), radius, Path.Direction.CW);
-            canvas.clipPath(path);
+            BitmapUtils.clipPath(canvas, path, option);
         }
         Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
         canvas.drawBitmap(srcBp, srcRect, destRect, paint);

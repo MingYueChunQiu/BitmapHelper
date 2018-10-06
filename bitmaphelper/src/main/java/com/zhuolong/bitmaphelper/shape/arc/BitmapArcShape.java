@@ -84,7 +84,8 @@ public class BitmapArcShape implements BitmapArcShapeable {
         }
         Path path = new Path();
         path.addArc(new RectF(destRect), startAngle, sweepAngle);
-        canvas.clipPath(path);
+        path.close();
+        BitmapUtils.clipPath(canvas, path, option);
         Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
         canvas.drawBitmap(srcBp, srcRect, destRect, paint);
         BitmapUtils.drawShapeOption(canvas, paint, path, option);

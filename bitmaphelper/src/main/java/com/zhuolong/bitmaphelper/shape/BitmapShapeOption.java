@@ -13,6 +13,7 @@ public class BitmapShapeOption {
 
     private int mStrokeWidth;//画笔线宽
     private int mStrokeColor;//画笔线颜色
+    private boolean hasInverseEvenOdd;//是否反转判断图片内外的奇偶规则
 
     public BitmapShapeOption() {
     }
@@ -23,6 +24,7 @@ public class BitmapShapeOption {
         }
         mStrokeWidth = builder.strokeWidth;
         mStrokeColor = builder.strokeColor;
+        this.hasInverseEvenOdd = hasInverseEvenOdd;
     }
 
     public int getStrokeWidth() {
@@ -41,9 +43,18 @@ public class BitmapShapeOption {
         mStrokeColor = strokeColor;
     }
 
+    public boolean isHasInverseEvenOdd() {
+        return hasInverseEvenOdd;
+    }
+
+    public void setHasInverseEvenOdd(boolean hasInverseEvenOdd) {
+        this.hasInverseEvenOdd = hasInverseEvenOdd;
+    }
+
     public static class Builder {
         private int strokeWidth;//画笔线宽
         private int strokeColor;//画笔线颜色
+        private boolean hasInverseEvenOdd;//是否反转判断图片内外的奇偶规则
 
         public BitmapShapeOption build() {
             return new BitmapShapeOption(this);
@@ -64,6 +75,15 @@ public class BitmapShapeOption {
 
         public Builder setStrokeColor(int strokeColor) {
             this.strokeColor = strokeColor;
+            return this;
+        }
+
+        public boolean isHasInverseEvenOdd() {
+            return hasInverseEvenOdd;
+        }
+
+        public Builder setHasInverseEvenOdd(boolean hasInverseEvenOdd) {
+            this.hasInverseEvenOdd = hasInverseEvenOdd;
             return this;
         }
     }

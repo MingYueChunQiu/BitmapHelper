@@ -73,7 +73,7 @@ public class BitmapCircleShape implements BitmapCircleShapeable {
         destRect.set(0, 0, radius * 2, radius * 2);
         Path path = new Path();
         path.addCircle(radius, radius, radius, Path.Direction.CW);
-        canvas.clipPath(path);
+        BitmapUtils.clipPath(canvas, path, option);
         Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
         canvas.drawBitmap(srcBp, srcRect, destRect, paint);
         BitmapUtils.drawShapeOption(canvas, paint, path, option);

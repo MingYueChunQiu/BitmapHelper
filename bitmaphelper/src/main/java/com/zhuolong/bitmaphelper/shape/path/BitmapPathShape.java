@@ -74,7 +74,7 @@ public class BitmapPathShape implements BitmapPathShapeable {
         Rect destRect = new Rect();
         destRect.set(0, 0, wideLength, highLength);
         if (path != null) {
-            canvas.clipPath(path);
+            BitmapUtils.clipPath(canvas, path, option);
         }
         Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
         canvas.drawBitmap(srcBp, srcRect, destRect, paint);

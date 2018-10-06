@@ -62,4 +62,22 @@ public class BitmapUtils {
         paint.setColor(option.getStrokeColor());
         canvas.drawPath(path, paint);
     }
+
+    /**
+     * 裁剪路径图形
+     *
+     * @param canvas 画布
+     * @param path   裁剪路径
+     * @param option 额外选项
+     */
+    public static void clipPath(Canvas canvas, Path path, BitmapShapeOption option) {
+        if (canvas == null || path == null) {
+            return;
+        }
+        if (option != null && option.isHasInverseEvenOdd()) {
+            path.setFillType(Path.FillType.INVERSE_EVEN_ODD);
+        }
+        canvas.clipPath(path);
+        path.setFillType(Path.FillType.EVEN_ODD);
+    }
 }

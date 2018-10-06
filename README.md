@@ -18,7 +18,7 @@ allprojects {
 
 ```
 dependencies {
-	        implementation 'com.github.MingYueChunQiu:BitmapHelper:0.1'
+	        implementation 'com.github.MingYueChunQiu:BitmapHelper:0.2'
 	}
 ```
 

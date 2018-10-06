@@ -32,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
         list.add(bitmap);
         BitmapShapeOption option = new BitmapShapeOption.Builder()
                 .setStrokeWidth((int) ScreenUtils.getPxFromDp(getResources(), 2))
-                .setHasInverseEvenOdd(false)
                 .setStrokeColor(Color.BLUE).build();
         option.setHasInverseEvenOdd(true);
         list.add(helper.getBitmapCircleShapeImpl().clipCircleShapeInCenter(bitmap, 0.5f, option));

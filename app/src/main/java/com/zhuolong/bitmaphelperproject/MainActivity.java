@@ -46,13 +46,14 @@ public class MainActivity extends AppCompatActivity {
         list.add(helper.getBitmapRoundRectShapeImpl().clipRoundRectShapeInCenter(bitmap,
                 new float[]{100, 100, 0, 0, 100, 100, 0, 0}, 0.7f, option));
         Path path = new Path();
-        path.moveTo(150, 0);
-        path.lineTo(400, 300);
-        path.lineTo(150, 400);
+        path.moveTo(200, 0);
+        path.lineTo(700, 300);
+        path.lineTo(200, 400);
         path.lineTo(100, 100);
         path.close();
-        option.setStrokeColor(Color.YELLOW);
-        list.add(helper.getBitmapPathShapeImpl().clipPathShapeInCenter(bitmap, path, rect, option));
+        option.setStrokeColor(Color.BLACK);
+        list.add(helper.getBitmapPathShapeImpl().clipPathShape(bitmap, path, rect, false, option));
+        list.add(helper.getBitmapPathShapeImpl().clipPathShape(bitmap, path, rect, true, option));
         rvBitmaps.setAdapter(new BitmapRvAdapter(this, list));
     }
 }

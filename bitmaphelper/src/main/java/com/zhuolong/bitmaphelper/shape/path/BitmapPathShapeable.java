@@ -20,22 +20,23 @@ public interface BitmapPathShapeable {
     /**
      * 裁剪任意路径图片，以源图片中心点为裁剪图片中点
      *
-     * @param srcBp  源图片
-     * @param path   裁剪的任意路径
-     * @param rect   裁剪图形所在矩形
-     * @param option 额外选项
+     * @param srcBp    源图片
+     * @param path     裁剪的任意路径
+     * @param isOffset 是否让path偏移，保证在包裹path的显示矩形里
+     * @param option   额外选项
      * @return 返回裁剪好的图片
      */
-    Bitmap clipPathShapeInCenter(Bitmap srcBp, Path path, Rect rect, BitmapShapeOption option);
+    Bitmap clipPathShapeInCenter(Bitmap srcBp, Path path, boolean isOffset, BitmapShapeOption option);
 
     /**
      * 裁剪任意路径图片
      *
-     * @param srcBp  源图片
-     * @param path   裁剪的任意路径
-     * @param rect   裁剪图形所在矩形
-     * @param option 额外选项
+     * @param srcBp    源图片
+     * @param path     裁剪的任意路径
+     * @param rect     裁剪图形所在矩形
+     * @param isOffset 是否让path偏移，保证在包裹path的显示矩形里
+     * @param option   额外选项
      * @return 返回裁剪好的图片
      */
-    Bitmap clipPathShape(Bitmap srcBp, Path path, Rect rect, BitmapShapeOption option);
+    Bitmap clipPathShape(Bitmap srcBp, Path path, Rect rect, boolean isOffset, BitmapShapeOption option);
 }

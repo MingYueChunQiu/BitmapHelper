@@ -76,12 +76,6 @@ public class BitmapArcShape implements BitmapArcShapeable {
         }
         Rect destRect = new Rect();
         destRect.set(0, 0, wideLength, highLength);
-        if (startAngle < 0) {
-            startAngle = 0;
-        }
-        if (sweepAngle < 0) {
-            sweepAngle = 0;
-        }
         Path path = new Path();
         path.addArc(new RectF(destRect), startAngle, sweepAngle);
         path.close();

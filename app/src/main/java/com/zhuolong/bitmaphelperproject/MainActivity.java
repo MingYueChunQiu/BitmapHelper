@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         option.setStrokeColor(Color.RED);
         list.add(helper.getBitmapOvalShapeImpl().clipOvalShapeInCenter(bitmap, 0.4f, option));
         Rect rect = new Rect(200, 200, 800, 600);
-        list.add(helper.getBitmapArcShapeImpl().clipArcShape(bitmap, 30, 180, rect, option));
+        list.add(helper.getBitmapArcShapeImpl().clipArcShape(bitmap, 30, -180, rect, option));
         option.setStrokeColor(Color.GREEN);
         list.add(helper.getBitmapRectShapeImpl().clipRectShapeInCenter(bitmap, rect, option));
         option.setStrokeColor(Color.GRAY);

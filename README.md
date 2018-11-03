@@ -1,3 +1,4 @@
+ 在新版本中提供了自定义功能，优化了项目框架。
  由于许多时候需要使用到对图片的一些裁剪特效，所以写了一个简单的帮助库，目前只是简单对形状做了一些处理，后续会进行优化改进，加入更多的效果。
 ## 一.各种处理效果
 ![Image text](images/Screenshot_20181006-101504.jpg)
@@ -30,38 +31,73 @@ dependencies {
     
     //在BitmapShapeHelper 里目前提供了对7种形状的处理
 	@NonNull
-    public BitmapCircleShapeable getBitmapCircleShapeImpl() {
-        return new BitmapCircleShape();
+    public BitmapCircleShapeHelper getBitmapCircleShapeHelper() {
+        return new BitmapCircleShapeHelper();
     }
 
     @NonNull
-    public BitmapSquareShapeable getBitmapSquareShapeImpl() {
-        return new BitmapSquareShape();
+    public BitmapCircleShapeHelper getBitmapCircleShapeHelper(BitmapCircleShapeable shapeable) {
+        return new BitmapCircleShapeHelper(shapeable);
     }
 
     @NonNull
-    public BitmapRoundRectShapeable getBitmapRoundRectShapeImpl() {
-        return new BitmapRoundRectShape();
+    public BitmapSquareShapeHelper getBitmapSquareShapeHelper() {
+        return new BitmapSquareShapeHelper();
     }
 
     @NonNull
-    public BitmapPathShapeable getBitmapPathShapeImpl() {
-        return new BitmapPathShape();
+    public BitmapSquareShapeHelper getBitmapSquareShapeHelper(BitmapSquareShapeable shapeable) {
+        return new BitmapSquareShapeHelper(shapeable);
     }
 
     @NonNull
-    public BitmapArcShapeable getBitmapArcShapeImpl() {
-        return new BitmapArcShape();
+    public BitmapRoundRectShapeHelper getBitmapRoundRectShapeHelper() {
+        return new BitmapRoundRectShapeHelper();
     }
 
     @NonNull
-    public BitmapRectShapeable getBitmapRectShapeImpl() {
-        return new BitmapRectShape();
+    public BitmapRoundRectShapeHelper getBitmapRoundRectShapeHelper(BitmapRoundRectShapeable shapeable) {
+        return new BitmapRoundRectShapeHelper(shapeable);
     }
 
     @NonNull
-    public BitmapOvalShapeable getBitmapOvalShapeImpl() {
-        return new BitmapOvalShape();
+    public BitmapPathShapeHelper getBitmapPathShapeHelper() {
+        return new BitmapPathShapeHelper();
+    }
+
+    @NonNull
+    public BitmapPathShapeHelper getBitmapPathShapeHelper(BitmapPathShapeable shapeable) {
+        return new BitmapPathShapeHelper(shapeable);
+    }
+
+    @NonNull
+    public BitmapArcShapeHelper getBitmapArcShapeHelper() {
+        return new BitmapArcShapeHelper();
+    }
+
+    @NonNull
+    public BitmapArcShapeHelper getBitmapArcShapeHelper(BitmapArcShapeable shapeable) {
+        return new BitmapArcShapeHelper(shapeable);
+    }
+
+    @NonNull
+    public BitmapRectShapeHelper getBitmapRectShapeHelper() {
+        return new BitmapRectShapeHelper();
+    }
+
+    @NonNull
+    public BitmapRectShapeHelper getBitmapRectShapeHelper(BitmapRectShapeable shapeable) {
+        return new BitmapRectShapeHelper(shapeable);
+    }
+
+    @NonNull
+    public BitmapOvalShapeHelper getBitmapOvalShapeHelper() {
+        return new BitmapOvalShapeHelper();
+    }
+
+    @NonNull
+    public BitmapOvalShapeHelper getBitmapOvalShapeHelper(BitmapOvalShapeable shapeable) {
+        return new BitmapOvalShapeHelper(shapeable);
     }
 ```
 更多详细内容请至本文末尾项目地址看项目demo使用或库源码。

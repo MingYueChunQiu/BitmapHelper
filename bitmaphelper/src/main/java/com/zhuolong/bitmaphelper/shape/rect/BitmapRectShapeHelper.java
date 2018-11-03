@@ -55,6 +55,9 @@ public class BitmapRectShapeHelper implements BitmapRectShapeable {
     }
 
     public void setShapeable(BitmapRectShapeable shapeable) {
+        if (shapeable == null) {
+            return;
+        }
         mShapeable = shapeable;
     }
 }

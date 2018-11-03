@@ -50,6 +50,9 @@ public class BitmapSquareShapeHelper implements BitmapSquareShapeable {
     }
 
     public void setShapeable(BitmapSquareShapeable shapeable) {
+        if (shapeable == null) {
+            return;
+        }
         mShapeable = shapeable;
     }
 }

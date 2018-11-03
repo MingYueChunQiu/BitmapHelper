@@ -46,6 +46,9 @@ public class BitmapPathShapeHelper implements BitmapPathShapeable {
     }
 
     public void setShapeable(BitmapPathShapeable shapeable) {
+        if (shapeable == null) {
+            return;
+        }
         mShapeable = shapeable;
     }
 }

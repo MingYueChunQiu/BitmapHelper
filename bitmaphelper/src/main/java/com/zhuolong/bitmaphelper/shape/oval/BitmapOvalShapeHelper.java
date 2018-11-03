@@ -55,6 +55,9 @@ public class BitmapOvalShapeHelper implements BitmapOvalShapeable {
     }
 
     public void setShapeable(BitmapOvalShapeable shapeable) {
+        if (shapeable == null) {
+            return;
+        }
         mShapeable = shapeable;
     }
 }

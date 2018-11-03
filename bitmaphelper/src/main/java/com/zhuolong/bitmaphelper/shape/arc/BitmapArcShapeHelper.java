@@ -50,6 +50,9 @@ public class BitmapArcShapeHelper implements BitmapArcShapeable {
     }
 
     public void setShapeable(BitmapArcShapeable shapeable) {
+        if (shapeable == null) {
+            return;
+        }
         mShapeable = shapeable;
     }
 }

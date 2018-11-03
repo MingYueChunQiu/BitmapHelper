@@ -50,6 +50,9 @@ public class BitmapCircleShapeHelper implements BitmapCircleShapeable {
     }
 
     public void setShapeable(BitmapCircleShapeable shapeable) {
+        if (shapeable == null) {
+            return;
+        }
         mShapeable = shapeable;
     }
 }

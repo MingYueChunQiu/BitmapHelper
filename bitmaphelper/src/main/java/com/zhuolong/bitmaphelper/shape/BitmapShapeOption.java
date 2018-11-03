@@ -11,36 +11,24 @@ package com.zhuolong.bitmaphelper.shape;
  */
 public class BitmapShapeOption {
 
-    private int mStrokeWidth;//画笔线宽
-    private int mStrokeColor;//画笔线颜色
+    private int strokeWidth;//画笔线宽
+    private int strokeColor;//画笔线颜色
     private boolean hasInverseEvenOdd;//是否反转判断图片内外的奇偶规则
 
-    public BitmapShapeOption() {
-    }
-
-    public BitmapShapeOption(Builder builder) {
-        if (builder == null) {
-            return;
-        }
-        mStrokeWidth = builder.strokeWidth;
-        mStrokeColor = builder.strokeColor;
-        this.hasInverseEvenOdd = hasInverseEvenOdd;
-    }
-
     public int getStrokeWidth() {
-        return mStrokeWidth;
+        return strokeWidth;
     }
 
     public void setStrokeWidth(int strokeWidth) {
-        mStrokeWidth = strokeWidth;
+        this.strokeWidth = strokeWidth;
     }
 
     public int getStrokeColor() {
-        return mStrokeColor;
+        return strokeColor;
     }
 
     public void setStrokeColor(int strokeColor) {
-        mStrokeColor = strokeColor;
+        this.strokeColor = strokeColor;
     }
 
     public boolean isHasInverseEvenOdd() {
@@ -52,38 +40,40 @@ public class BitmapShapeOption {
     }
 
     public static class Builder {
-        private int strokeWidth;//画笔线宽
-        private int strokeColor;//画笔线颜色
-        private boolean hasInverseEvenOdd;//是否反转判断图片内外的奇偶规则
+        private BitmapShapeOption mOption;
+
+        public Builder() {
+            mOption = new BitmapShapeOption();
+        }
 
         public BitmapShapeOption build() {
-            return new BitmapShapeOption(this);
+            return mOption;
         }
 
         public int getStrokeWidth() {
-            return strokeWidth;
+            return mOption.strokeWidth;
         }
 
         public Builder setStrokeWidth(int strokeWidth) {
-            this.strokeWidth = strokeWidth;
+            mOption.strokeWidth = strokeWidth;
             return this;
         }
 
         public int getStrokeColor() {
-            return strokeColor;
+            return mOption.strokeColor;
         }
 
         public Builder setStrokeColor(int strokeColor) {
-            this.strokeColor = strokeColor;
+            mOption.strokeColor = strokeColor;
             return this;
         }
 
         public boolean isHasInverseEvenOdd() {
-            return hasInverseEvenOdd;
+            return mOption.hasInverseEvenOdd;
         }
 
         public Builder setHasInverseEvenOdd(boolean hasInverseEvenOdd) {
-            this.hasInverseEvenOdd = hasInverseEvenOdd;
+            mOption.hasInverseEvenOdd = hasInverseEvenOdd;
             return this;
         }
     }

@@ -19,7 +19,7 @@ import com.zhuolong.bitmaphelper.util.BitmapUtils;
  *     version: 1.0
  * </pre>
  */
-public class BitmapCircleShape implements BitmapCircleShapeable {
+class BitmapCircleShape implements BitmapCircleShapeable {
 
     @Override
     public Bitmap clipCircleShapeInCenter(Bitmap srcBp, BitmapShapeOption option) {

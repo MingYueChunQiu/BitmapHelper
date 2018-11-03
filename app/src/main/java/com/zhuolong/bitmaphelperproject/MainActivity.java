@@ -34,17 +34,17 @@ public class MainActivity extends AppCompatActivity {
                 .setStrokeWidth((int) ScreenUtils.getPxFromDp(getResources(), 2))
                 .setStrokeColor(Color.BLUE).build();
         option.setHasInverseEvenOdd(true);
-        list.add(helper.getBitmapCircleShapeImpl().clipCircleShapeInCenter(bitmap, 0.5f, option));
-        list.add(helper.getBitmapSquareShapeImpl().clipSquareShapeInCenter(bitmap, 0.5f, null));
+        list.add(helper.getBitmapCircleShapeHelper().clipCircleShapeInCenter(bitmap, 0.5f, option));
+        list.add(helper.getBitmapSquareShapeHelper().clipSquareShapeInCenter(bitmap, 0.5f, null));
         option.setStrokeWidth((int) ScreenUtils.getPxFromDp(getResources(), 4));
         option.setStrokeColor(Color.RED);
-        list.add(helper.getBitmapOvalShapeImpl().clipOvalShapeInCenter(bitmap, 0.4f, option));
+        list.add(helper.getBitmapOvalShapeHelper().clipOvalShapeInCenter(bitmap, 0.4f, option));
         Rect rect = new Rect(200, 200, 800, 600);
-        list.add(helper.getBitmapArcShapeImpl().clipArcShape(bitmap, 30, -180, rect, option));
+        list.add(helper.getBitmapArcShapeHelper().clipArcShape(bitmap, 30, -180, rect, option));
         option.setStrokeColor(Color.GREEN);
-        list.add(helper.getBitmapRectShapeImpl().clipRectShapeInCenter(bitmap, rect, option));
+        list.add(helper.getBitmapRectShapeHelper().clipRectShapeInCenter(bitmap, rect, option));
         option.setStrokeColor(Color.GRAY);
-        list.add(helper.getBitmapRoundRectShapeImpl().clipRoundRectShapeInCenter(bitmap,
+        list.add(helper.getBitmapRoundRectShapeHelper().clipRoundRectShapeInCenter(bitmap,
                 new float[]{200, 200, 0, 0, 200, 200, 0, 0}, 0.7f, option));
         Path path = new Path();
         path.moveTo(200, 0);
@@ -53,8 +53,8 @@ public class MainActivity extends AppCompatActivity {
         path.lineTo(100, 100);
         path.close();
         option.setStrokeColor(Color.BLACK);
-        list.add(helper.getBitmapPathShapeImpl().clipPathShape(bitmap, path, rect, false, option));
-        list.add(helper.getBitmapPathShapeImpl().clipPathShape(bitmap, path, rect, true, option));
+        list.add(helper.getBitmapPathShapeHelper().clipPathShape(bitmap, path, rect, false, option));
+        list.add(helper.getBitmapPathShapeHelper().clipPathShape(bitmap, path, rect, true, option));
         rvBitmaps.setAdapter(new BitmapRvAdapter(this, list));
     }
 }

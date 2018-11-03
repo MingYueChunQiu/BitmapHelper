@@ -20,7 +20,7 @@ import com.zhuolong.bitmaphelper.util.BitmapUtils;
  *     version: 1.0
  * </pre>
  */
-public class BitmapRectShape implements BitmapRectShapeable {
+class BitmapRectShape implements BitmapRectShapeable {
 
     @Override
     public Bitmap clipRectShapeInCenter(Bitmap srcBp, Rect rect, BitmapShapeOption option) {

@@ -20,7 +20,7 @@ import com.zhuolong.bitmaphelper.util.BitmapUtils;
  *     version: 1.0
  * </pre>
  */
-public class BitmapArcShape implements BitmapArcShapeable {
+class BitmapArcShape implements BitmapArcShapeable {
 
     @Override
     public Bitmap clipArcShapeInCenter(Bitmap srcBp, float startAngle, float sweepAngle, BitmapShapeOption option) {

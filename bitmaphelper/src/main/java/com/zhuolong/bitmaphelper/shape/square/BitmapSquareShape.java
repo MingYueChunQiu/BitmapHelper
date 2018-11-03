@@ -20,7 +20,7 @@ import com.zhuolong.bitmaphelper.util.BitmapUtils;
  *     version: 1.0
  * </pre>
  */
-public class BitmapSquareShape implements BitmapSquareShapeable {
+class BitmapSquareShape implements BitmapSquareShapeable {
 
     @Override
     public Bitmap clipSquareShapeInCenter(Bitmap srcBp, BitmapShapeOption option) {

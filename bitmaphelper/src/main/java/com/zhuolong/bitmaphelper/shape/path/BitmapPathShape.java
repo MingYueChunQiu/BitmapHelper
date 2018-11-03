@@ -21,7 +21,7 @@ import com.zhuolong.bitmaphelper.util.BitmapUtils;
  *     version: 1.0
  * </pre>
  */
-public class BitmapPathShape implements BitmapPathShapeable {
+class BitmapPathShape implements BitmapPathShapeable {
 
     @Override
     public Bitmap clipPathShapeInCenter(Bitmap srcBp, Path path, boolean isOffset, BitmapShapeOption option) {
